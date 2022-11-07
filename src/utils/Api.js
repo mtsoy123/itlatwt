@@ -1,12 +1,5 @@
 import {key} from './apikey';
 
-const options = {
-  headers: {
-    'X-RapidAPI-Key': 'b383ae007fmsha23a1e9e3b90b17p1bda8ajsn81fa0a954caf',
-    'X-RapidAPI-Host': 'divanscore.p.rapidapi.com'
-  }
-};
-
 class Api {
   constructor({
                 baseUrl,
@@ -16,14 +9,12 @@ class Api {
     this._headers = headers;
   }
 
-  _checkResponse(url, options1 = {}) {
-    return fetch(url, options1)
+  _checkResponse(url, options = {}) {
+    return fetch(url, options)
     .then((res) => (res.ok ? res.json() : Promise.reject(res.status)));
   }
 
   getResults() {
-    console.log(this._headers, "headers")
-    console.log(options, "options")
     return this._checkResponse(this._baseUrl, {headers: this._headers});
   }
 }
