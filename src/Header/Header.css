@@ -1,0 +1,31 @@
+.header {
+  background-color: #D8E8F8;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Helvetica Neue', serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 29px;
+  line-height: 35px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.19em;
+
+  color: #2C497F;
+
+  margin-bottom: 0;
+  padding: 20px 0 20px 0;
+}
+
+.logo_red {
+  color: #7CB305;
+}
+
+.logo_green {
+  color: #D4380D;
+}
